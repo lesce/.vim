@@ -4,7 +4,8 @@
 "TODO clean code 
 "TODO remove unecesary stuff
 "TODO get spell checker
-
+"TODO add rails support
+set nu
 let mapleader = ','
 let g:mapleader = ','
 
@@ -27,20 +28,31 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 
-set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
+" Display incomplete commands.
+set showcmd
 
-set backspace=indent,eol,start    " Intuitive backspacing.
+" Display the mode you're in.
+set showmode                      
+
+" Intuitive backspacing.
+set backspace=indent,eol,start
 
 set hidden
 
 set wildmenu
-set wildmode=list:longest         " Complete files like a shell.
+" Complete files like a shell.
+set wildmode=list:longest
+set ffs=unix,dos,mac "Default file types
 
-set ignorecase                    " Case-insensitive searching.
-set smartcase                     " But case-sensitive if expression contains a capital letter.
+" Case-insensitive searching.
+set ignorecase 
+" But case-sensitive if expression contains a capital letter.
+set smartcase
 
 set autoread
+"Show matching braces 
+set showmatch
+"Reload vimrc after save
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
 set ruler                         " Show cursor position.
@@ -59,7 +71,6 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
-" UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
@@ -68,11 +79,10 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Or use vividchalk
 colorscheme topfunky-light
-""""""""""""""""""""""""""""""""""""
-" line highlight when in insert mode
-""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""
+" line highlight when in insert mode"
+"""""""""""""""""""""""""""""""""""""
 set cursorline
 hi CursorLine cterm=NONE ctermbg=NONE guibg=NONE
 autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey guibg=darkgrey
