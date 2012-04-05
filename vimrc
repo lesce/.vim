@@ -5,9 +5,12 @@
 "TODO remove unecesary stuff
 "TODO get spell checker
 "TODO add rails support
-set nu
+
+
 let mapleader = ','
 let g:mapleader = ','
+
+map <leader>e :vne ~/.vim/vimrc<CR>
 
 map <C-Down> <C-W>j
 map <C-Up> <C-W>k
@@ -17,12 +20,12 @@ call pathogen#infect()
 map <leader>cd :cd %:p:h<cr>
 nmap <tab><tab> :NERDTreeToggle<CR>
 map <BS> <C-^> " Go to previous file
-nmap <C-s> :w!<CR>
+nmap <C-x> :q!<CR>
+map <leader>f :FufFile<cr>
 map <leader>ss :setlocal spell!<cr>
-
+set nu
 set nocompatible
 syntax enable
-map <leader>v :vne ~/.vim/vimrc<CR>
 
 filetype plugin indent on
 
@@ -76,8 +79,6 @@ set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
-" Useful status information at bottom of screen
-" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 colorscheme topfunky-light
 """""""""""""""""""""""""""""""""""""
@@ -90,26 +91,10 @@ autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
 map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
 map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
 
 " Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
-
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+map <Leader>t :FuzzyFinderTextMate<Enter>
 
