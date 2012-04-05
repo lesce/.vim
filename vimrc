@@ -1,8 +1,27 @@
 " Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
+"TODO Find out why Ctrl - S isn\t working
+"TODO clean code 
+"TODO remove unecesary stuff
+"TODO get spell checker
+
+let mapleader = ','
+let g:mapleader = ','
+
+map <C-Down> <C-W>j
+map <C-Up> <C-W>k
+map <C-Left> <C-W>h
+map <C-Right> <C-W>l
+call pathogen#infect()
+map <leader>cd :cd %:p:h<cr>
+nmap <tab><tab> :NERDTreeToggle<CR>
+map <BS> <C-^> " Go to previous file
+nmap <C-s> :w!<CR>
+map <leader>ss :setlocal spell!<cr>
 
 set nocompatible
 syntax enable
+map <leader>v :vne ~/.vim/vimrc<CR>
 
 filetype plugin indent on
 
@@ -21,7 +40,9 @@ set wildmode=list:longest         " Complete files like a shell.
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
-set number                        " Show line numbers.
+set autoread
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
+
 set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
