@@ -3,9 +3,14 @@
 "TODO Find out why Ctrl - S isn\t working
 "TODO clean code 
 "TODO remove unecesary stuff
-"TODO get spell checker
-"TODO add rails support
 
+call pathogen#infect()
+
+syntax enable
+
+filetype plugin indent on
+
+runtime macros/matchit.vim
 
 let mapleader = ','
 let g:mapleader = ','
@@ -16,20 +21,16 @@ map <C-Down> <C-W>j
 map <C-Up> <C-W>k
 map <C-Left> <C-W>h
 map <C-Right> <C-W>l
-call pathogen#infect()
 map <leader>cd :cd %:p:h<cr>
 nmap <tab><tab> :NERDTreeToggle<CR>
 map <BS> <C-^> " Go to previous file
 nmap <C-x> :q!<CR>
 map <leader>f :FufFile<cr>
 map <leader>ss :setlocal spell!<cr>
+imap <tab> <C-n>
+set noswapfile
 set nu
 set nocompatible
-syntax enable
-
-filetype plugin indent on
-
-runtime macros/matchit.vim
 
 " Display incomplete commands.
 set showcmd
@@ -94,7 +95,3 @@ map <leader>tt :tabnew<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
-
-" Uncomment to use Jamis Buck's file opening plugin
-map <Leader>t :FuzzyFinderTextMate<Enter>
-
