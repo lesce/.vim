@@ -85,10 +85,10 @@ colorscheme topfunky-light
 """""""""""""""""""""""""""""""""""""
 " line highlight when in insert mode"
 """""""""""""""""""""""""""""""""""""
-set cursorline
-hi CursorLine cterm=NONE ctermbg=NONE guibg=NONE
-autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey guibg=darkgrey
-autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
+" set cursorline
+" hi CursorLine cterm=NONE ctermbg=NONE guibg=NONE
+" autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey guibg=darkgrey
+" autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
