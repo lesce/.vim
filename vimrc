@@ -45,6 +45,7 @@ set backspace=indent,eol,start
 set hidden
 
 set wildmenu
+set shell=/bin/bash
 " Complete files like a shell.
 set wildmode=list:longest
 set ffs=unix,dos,mac "Default file types
