@@ -28,6 +28,7 @@ nmap <C-x> :q!<CR>
 map <leader>f :FufFile<cr>
 map <leader>ss :setlocal spell!<cr>
 imap <tab> <C-n>
+map 0 ^
 set noswapfile
 set nu
 set nocompatible

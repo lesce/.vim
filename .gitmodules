@@ -4,7 +4,7 @@
 
 [submodule "bundle/L9"]
     path = bundle/L9
-    url = https://github.com/clones/vim-l9.git 
+    url = https://github.com/slack/vim-l9.git
 
 [submodule "bundle/nerdtree"]
     path = bundle/nerdtree
