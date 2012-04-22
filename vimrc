@@ -28,6 +28,7 @@ nmap <C-x> :q!<CR>
 map <leader>f :FufFile<cr>
 map <leader>ss :setlocal spell!<cr>
 imap <tab> <C-n>
+map 0 ^
 set noswapfile
 set nu
 set nocompatible
@@ -44,6 +45,7 @@ set backspace=indent,eol,start
 set hidden
 
 set wildmenu
+set shell=/bin/zsh
 " Complete files like a shell.
 set wildmode=list:longest
 set ffs=unix,dos,mac "Default file types
