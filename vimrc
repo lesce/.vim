@@ -47,6 +47,7 @@ set wildmenu
 " Complete files like a shell.
 set wildmode=list:longest
 set ffs=unix,dos,mac "Default file types
+set shell=/bin/bash
 
 " Case-insensitive searching.
 set ignorecase 
