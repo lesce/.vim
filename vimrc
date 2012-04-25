@@ -82,8 +82,11 @@ set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
-
 colorscheme topfunky-light
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
 """""""""""""""""""""""""""""""""""""
 " line highlight when in insert mode"
 """""""""""""""""""""""""""""""""""""
@@ -93,7 +96,7 @@ colorscheme topfunky-light
 " autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
 
 " Tab mappings.
-map <leader>tt :tabnew<cr>
+map <leader>t :tabnew<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
