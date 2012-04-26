@@ -25,7 +25,7 @@ map <leader>cd :cd %:p:h<cr>
 nmap <tab><tab> :NERDTreeToggle<CR>
 map <BS> <C-^> " Go to previous file
 nmap <C-x> :q!<CR>
-map <leader>f :FufFile<cr>
+map <leader>f :FufBuffer<cr>
 map <leader>ss :setlocal spell!<cr>
 imap <tab> <C-n>
 map 0 ^
