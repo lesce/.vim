@@ -16,7 +16,7 @@ let mapleader = ','
 let g:mapleader = ','
 
 map <leader>e :vne ~/.vim/vimrc<CR>
-
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 map <C-Down> <C-W>j
 map <C-Up> <C-W>k
 map <C-Left> <C-W>h
@@ -45,11 +45,13 @@ set backspace=indent,eol,start
 set hidden
 
 set wildmenu
-set shell=/bin/zsh
+set shell=/bin/bash
+" Add interactive mode to shellcomandflag
+" this will run ~/.bashrc
+set shcf=-ic
 " Complete files like a shell.
 set wildmode=list:longest
 set ffs=unix,dos,mac "Default file types
-set shell=/bin/bash
 
 " Case-insensitive searching.
 set ignorecase 
