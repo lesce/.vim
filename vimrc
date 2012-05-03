@@ -1,36 +1,23 @@
-" Example Vim configuration.
-" Copy or symlink to ~/.vimrc or ~/_vimrc.
-"TODO Find out why Ctrl - S isn\t working
-"TODO clean code 
-"TODO remove unecesary stuff
-
+" add source ~/.vim/vimrc to your ~/.vimrc file
 call pathogen#infect()
 
 syntax enable
 
 filetype plugin indent on
 
+" Run this at runtime.
 runtime macros/matchit.vim
 
-let mapleader = ','
-let g:mapleader = ','
+" Reload vimrc after save.
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-map <leader>e :vne ~/.vim/vimrc<CR>
-map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
-map <C-Down> <C-W>j
-map <C-Up> <C-W>k
-map <C-Left> <C-W>h
-map <C-Right> <C-W>l
-map <leader>cd :cd %:p:h<cr>
-nmap <tab><tab> :NERDTreeToggle<CR>
-map <BS> <C-^> " Go to previous file
-nmap <C-x> :q!<CR>
-map <leader>f :FufBuffer<cr>
-map <leader>ss :setlocal spell!<cr>
-imap <tab> <C-n>
-map 0 ^
+" Don't make a swapfile.
 set noswapfile
+
+" Display line number.
 set nu
+
+" No vi compatibility.
 set nocompatible
 
 " Display incomplete commands.
@@ -45,58 +32,95 @@ set backspace=indent,eol,start
 set hidden
 
 set wildmenu
+
+" Set vim shell.
 set shell=/bin/bash
+
 " Add interactive mode to shellcomandflag
-" this will run ~/.bashrc
+" this will load ~/.bashrc
 set shcf=-ic
+
 " Complete files like a shell.
 set wildmode=list:longest
-set ffs=unix,dos,mac "Default file types
+
+"Default file types
+set ffs=unix,dos,mac 
 
 " Case-insensitive searching.
 set ignorecase 
+
 " But case-sensitive if expression contains a capital letter.
 set smartcase
 
 set autoread
+
 "Show matching braces 
 set showmatch
-"Reload vimrc after save
-autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-set ruler                         " Show cursor position.
+" Show cursor position.
+set ruler                         
 
-set incsearch                     " Highlight matches as you type.
-set hlsearch                      " Highlight matches.
+" Highlight matches as you type.
+set incsearch                     
 
-set wrap                          " Turn on line wrapping.
+" Highlight matches.
+set hlsearch                      
+
+" Turn on line wrapping.
+set wrap                          
+
 set scrolloff=3
 
-set title                         " Set the terminal's title
+" No beeping.
+set visualbell                    
 
-set visualbell                    " No beeping.
+" Global tab width.
+set tabstop=2                    
 
-set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+" Set indentation.
+set shiftwidth=2 
 
-set tabstop=2                    " Global tab width.
-set shiftwidth=2                 " And again, related.
-set expandtab                    " Use spaces instead of tabs
+" Use spaces instead of tabs.
+set expandtab                    
 
-set laststatus=2                  " Show the status line all the time
 colorscheme topfunky-light
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
-"""""""""""""""""""""""""""""""""""""
-" line highlight when in insert mode"
-"""""""""""""""""""""""""""""""""""""
-" set cursorline
-" hi CursorLine cterm=NONE ctermbg=NONE guibg=NONE
-" autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey guibg=darkgrey
-" autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
+" make comma my leader key.
+let mapleader = ','
+let g:mapleader = ','
+
+" , + e open vimrc.
+map <leader>e :vne ~/.vim/vimrc<CR>
+
+" tag all gems in your curent directory.
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
+
+" Move between windows with Ctrl + arrows.
+map <C-Down> <C-W>j
+map <C-Up> <C-W>k
+map <C-Left> <C-W>h
+map <C-Right> <C-W>l
+
+" change current directory to the current files location directory.
+map <leader>cd :cd %:p:h<cr>
+
+" open NerdTree.
+nmap <tab><tab> :NERDTreeToggle<CR>
+
+" Go to previous file.
+map <BS> <C-^> nmap <C-x> :q!<CR>
+
+" Find files from buffer.
+map <leader>f :FufBuffer<cr>
+
+" Check spelling
+map <leader>ss :setlocal spell!<cr>
+
+" use tab for auto-complete 
+imap <tab> <C-n>
+
+" goto first char from line
+map 0 ^
 
 " Tab mappings.
 map <leader>t :tabnew<cr>
