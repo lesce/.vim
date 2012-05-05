@@ -95,7 +95,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 " hi CursorLine cterm=NONE ctermbg=NONE guibg=NONE
 " autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey guibg=darkgrey
 " autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
-
+set tags+=gems.tags
 " Tab mappings.
 map <leader>t :tabnew<cr>
 map <leader>tc :tabclose<cr>
