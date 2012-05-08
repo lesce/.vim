@@ -38,7 +38,7 @@ set shell=/bin/bash
 
 " Add interactive mode to shellcomandflag
 " this will load ~/.bashrc
-set shcf=-ic
+"set shcf=-ic
 
 " Complete files like a shell.
 set wildmode=list:longest
@@ -82,8 +82,7 @@ set shiftwidth=2
 
 " Use spaces instead of tabs.
 set expandtab                    
-
-colorscheme topfunky-light
+colorscheme neon
 
 " make comma my leader key.
 let mapleader = ','
@@ -108,19 +107,34 @@ map <leader>cd :cd %:p:h<cr>
 nmap <tab><tab> :NERDTreeToggle<CR>
 
 " Go to previous file.
-map <BS> <C-^> nmap <C-x> :q!<CR>
+map <BS> <C-^>
+
+"Close window
+nmap <C-x> :q!<CR>
 
 " Find files from buffer.
 map <leader>f :FufBuffer<cr>
 
 " Check spelling
 map <leader>ss :setlocal spell!<cr>
-
-" use tab for auto-complete 
-imap <tab> <C-n>
-
+           
 " goto first char from line
 map 0 ^
+
+" Clear the search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
+
+" Indent if we're at the beginning of a line. Else, do completion.
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " Tab mappings.
 map <leader>t :tabnew<cr>
