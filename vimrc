@@ -84,6 +84,8 @@ set shiftwidth=2
 set expandtab                    
 colorscheme solarized
 
+set tags+=gems.tags
+
 " make comma my leader key.
 let mapleader = ','
 let g:mapleader = ','
