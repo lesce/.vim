@@ -82,7 +82,7 @@ set shiftwidth=2
 
 " Use spaces instead of tabs.
 set expandtab                    
-colorscheme neon
+colorscheme solarized
 
 " make comma my leader key.
 let mapleader = ','
