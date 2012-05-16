@@ -38,7 +38,7 @@ set shell=/bin/bash
 
 " Add interactive mode to shellcomandflag
 " this will load ~/.bashrc
-"set shcf=-ic
+" set shcf=-ic
 
 " Complete files like a shell.
 set wildmode=list:longest
@@ -82,6 +82,7 @@ set shiftwidth=2
 
 " Use spaces instead of tabs.
 set expandtab                    
+set background=dark
 colorscheme solarized
 
 set tags+=gems.tags
@@ -108,12 +109,6 @@ map <leader>cd :cd %:p:h<cr>
 " open NerdTree.
 nmap <tab><tab> :NERDTreeToggle<CR>
 
-" Go to previous file.
-map <BS> <C-^>
-
-"Close window
-nmap <C-x> :q!<CR>
-
 " Find files from buffer.
 map <leader>f :FufBuffer<cr>
 
@@ -139,7 +134,7 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " Tab mappings.
-map <leader>t :tabnew<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
+"map <leader>t :tabnew<cr>
+"map <leader>tc :tabclose<cr>
+"map <leader>tn :tabnext<cr>
+"map <leader>tp :tabprevious<cr>
