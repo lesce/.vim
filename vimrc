@@ -11,6 +11,9 @@ runtime macros/matchit.vim
 " Reload vimrc after save.
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
+" Set backgroudn light
+set background=light
+
 " Don't make a swapfile.
 set noswapfile
 
@@ -82,8 +85,6 @@ set shiftwidth=2
 
 " Use spaces instead of tabs.
 set expandtab                    
-set background=dark
-colorscheme solarized
 
 set tags+=gems.tags
 
@@ -138,3 +139,5 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "map <leader>tc :tabclose<cr>
 "map <leader>tn :tabnext<cr>
 "map <leader>tp :tabprevious<cr>
+let ruby_space_errors = 1
+let c_space_errors = 1

@@ -2,9 +2,7 @@
 
 " Hide toolbar.
 syntax enable
-set gfn=Anonymous\ Pro\ 10
-set background=dark
-colorscheme solarized
+" set gfn=Anonymous\ Pro\ 10
 set guioptions-=T
 
 " Reload gvimrc after save.
