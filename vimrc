@@ -2,7 +2,14 @@
 call pathogen#infect()
 
 syntax enable
-colorscheme advantage
+
+" Set background for gvim and vim
+if has('gui_running')
+  set background=dark
+else
+  set background=dark
+  let g:solarized_termcolors=256
+endif
 
 filetype plugin indent on
 
@@ -12,8 +19,7 @@ runtime macros/matchit.vim
 " Reload vimrc after save.
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-" Set backgroudn light
-set background=light
+colorscheme solarized
 
 " Don't make a swapfile.
 set noswapfile
@@ -89,7 +95,6 @@ set tabstop=2
 set shiftwidth=2 
 " Use spaces instead of tabs.
 set expandtab                    
-set background=dark
 
 set tags+=gems.tags
 
