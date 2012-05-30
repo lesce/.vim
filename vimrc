@@ -2,6 +2,7 @@
 call pathogen#infect()
 
 syntax enable
+colorscheme advantage
 
 filetype plugin indent on
 
@@ -16,6 +17,10 @@ set noswapfile
 
 " Display line number.
 set nu
+
+" Set this for vim Powerline
+set laststatus=2
+set encoding=utf-8
 
 " No vi compatibility.
 set nocompatible
@@ -79,11 +84,9 @@ set tabstop=2
 
 " Set indentation.
 set shiftwidth=2 
-
 " Use spaces instead of tabs.
 set expandtab                    
 set background=dark
-colorscheme solarized
 
 set tags+=gems.tags
 
@@ -92,6 +95,7 @@ let mapleader = ','
 let g:mapleader = ','
 
 " , + e open vimrc.
+
 map <leader>e :vne ~/.vim/vimrc<CR>
 
 " tag all gems in your curent directory.
