@@ -2,7 +2,7 @@
 
 " Hide toolbar.
 syntax enable
-set gfn=Anonymous\ Pro\ 10
+set gfn=Anonymous\ Pro\ 12
 set guioptions-=T
 
 " Reload gvimrc after save.

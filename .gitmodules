@@ -4,7 +4,7 @@
 
 [submodule "bundle/L9"]
     path = bundle/L9
-    url = https://github.com/slack/vim-l9.git
+    url = https://github.com/vim-scripts/L9.git
 
 [submodule "bundle/nerdtree"]
     path = bundle/nerdtree
@@ -21,3 +21,26 @@
 [submodule "bundle/vim-supertab"]
     path = bundle/vim-supertab
     url = https://github.com/tsaleh/vim-supertab.git
+
+[submodule "bundle/ctrlp.vim"]
+    path = bundle/ctrlp.vim
+    url = https://github.com/kien/ctrlp.vim.git
+
+[submodule "bundle/vimball"]
+    path = bundle/vimball
+    url = https://github.com/vim-scripts/Vimball.git
+
+[submodule "bundle/vim-colors-solarized"]
+    path = bundle/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
+
+[submodule "bundle/vim-indent-guides"]
+    path = bundle/vim-indent-guides
+    url = https://github.com/nathanaelkane/vim-indent-guides.git
+
+[submodule "bundle/vim-powerline"]
+    path = bundle/vim-powerline
+    url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "L9"]
+	path = L9
+	url = ./bundle/L9
