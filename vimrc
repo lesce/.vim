@@ -19,7 +19,7 @@ runtime macros/matchit.vim
 " Reload vimrc after save.
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-colorscheme solarized
+colorscheme mango
 
 " Don't make a swapfile.
 set noswapfile
