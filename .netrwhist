@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/andrei/repo/aeroconf-rebuild'
-let g:netrw_dirhist_2='/home/andrei/repo/aeroconf-rebuild/.git'
-let g:netrw_dirhist_3='/home/andrei/repo/aeroconf-rebuild'
-let g:netrw_dirhist_4='/home/andrei/.oh-my-zsh'
-let g:netrw_dirhist_5='/home/lesce/.rvm/src/ruby-1.9.3-p194'
-let g:netrw_dirhist_6='/home/lesce/projects/aeroconf-rebuild'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/lesce/projects'
+let g:netrw_dirhist_2='/Users/lesce/projects/projectBanana'
+let g:netrw_dirhist_3='/Users/lesce/projects'
+let g:netrw_dirhist_4='/Users/lesce/projects/projectBanana'
+let g:netrw_dirhist_5='/Users/lesce/projects/aeroconf-rebuild'
+let g:netrw_dirhist_6='/Users/lesce/projects/naifu'
+let g:netrw_dirhist_7='/Users/lesce/projects/aeroconf-rebuild'
+let g:netrw_dirhist_8='/Users/lesce/projects/machine_monitor'
