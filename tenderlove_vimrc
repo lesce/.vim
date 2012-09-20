@@ -1,6 +1,10 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+let g:Powerline_theme="skwp"
+let g:Powerline_colorscheme="skwp"
+let g:Powerline_symbold="fancy"
+
 set nocompatible
 set backspace=indent,eol,start
 set autoindent		" always set autoindenting on
@@ -10,6 +14,10 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
 set wildmode=list:full
+
+let mapleader = ','
+let g:mapleader = ','
+map <leader>e :vne ~/.vimrc<CR>
 
 map Q gq
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
@@ -116,7 +124,7 @@ augroup END
 
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 let g:ConqueTerm_CloseOnEnd = 0
-nmap <Leader>cb :ConqueTermSplit bash
+nmap <Leader>cb :ConqueTermSplit zsh
 
 set scrolloff=2
 "set foldmethod=syntax

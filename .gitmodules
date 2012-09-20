@@ -4,7 +4,7 @@
 
 [submodule "bundle/L9"]
     path = bundle/L9
-    url = https://github.com/slack/vim-l9.git
+    url = https://github.com/vim-scripts/L9.git
 
 [submodule "bundle/nerdtree"]
     path = bundle/nerdtree
@@ -28,7 +28,7 @@
 
 [submodule "bundle/snipmate.vim"]
     path = bundle/snipmate.vim
-    url = https://github.com/msanders/snipmate.vim.git 
+    url = https://github.com/kien/ctrlp.vim.git
 
 [submodule "bundle/vimball"]
     path = bundle/vimball
@@ -41,6 +41,10 @@
 [submodule "bundle/vim-css-color"]
     path = bundle/vim-css-color
     url = https://github.com/skammer/vim-css-color.git
+
+[submodule "bundle/vim-colors-solarized"]
+    path = bundle/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
 
 [submodule "bundle/vim-indent-guides"]
     path = bundle/vim-indent-guides

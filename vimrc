@@ -3,14 +3,6 @@ call pathogen#infect()
 
 syntax enable
 
-" Set background for gvim and vim
-if has('gui_running')
-  set background=dark
-else
-  set background=dark
-  let g:solarized_termcolors=256
-endif
-
 filetype plugin indent on
 
 " Run this at runtime.
@@ -19,15 +11,21 @@ runtime macros/matchit.vim
 " Reload vimrc after save.
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-colorscheme solarized
-
 " Don't make a swapfile.
 set noswapfile
 
 " Display line number.
 set nu
 
+" Set white bg
+set background=light
+
+
 " Set this for vim Powerline
+let g:Powerline_theme="skwp"
+let g:Powerline_colorscheme="skwp"
+let g:Powerline_symbold="fancy"
+
 set laststatus=2
 set encoding=utf-8
 
@@ -104,7 +102,7 @@ let g:mapleader = ','
 
 " , + e open vimrc.
 
-map <leader>e :vne ~/.vim/vimrc<CR>
+map <leader>e :vne ~/.vimrc<CR>
 
 " tag all gems in your curent directory.
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
