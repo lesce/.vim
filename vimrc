@@ -103,7 +103,7 @@ map <leader>e :vne ~/.vimrc<CR>
 " tag all gems in your curent directory.
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 " map for bash
-nmap <Leader>cb :ConqueTermSplit bash<CR>
+nmap <Leader>t :ConqueTermSplit bash<CR>
 " Move between windows with Ctrl + arrows.
 map <C-Down> <C-W>j
 map <C-Up> <C-W>k
