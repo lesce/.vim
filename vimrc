@@ -18,7 +18,7 @@ set noswapfile
 set nu
 
 " Set this for vim Powerline
-let g:Powerline_theme="skwp"
+"let g:Powerline_theme="skwp"
 let g:Powerline_colorscheme="skwp"
 let g:Powerline_symbold="fancy"
 
@@ -121,6 +121,10 @@ map <leader>f :FufBuffer<cr>
 
 " Check spelling
 map <leader>ss :setlocal spell!<cr>
+
+" Map leader '['  ']' to switch between tabs 
+nmap <leader>[ :tabp <cr>
+nmap <leader>] :tabn <cr>
            
 " goto first char from line
 map 0 ^

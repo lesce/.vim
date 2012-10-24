@@ -1,8 +1,8 @@
 " Giving vim some makeup
 syntax enable
+
 set background=dark
 colorscheme solarized
-set gfn=Anonymous\ Pro\ 12
 
 " Hide toolbar, menubar and scrollbars
 set guioptions-=T
