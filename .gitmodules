@@ -4,7 +4,7 @@
 
 [submodule "bundle/L9"]
     path = bundle/L9
-    url = git://github.com/klen/L9.git
+    url = git://github.com/vim-scripts/L9.git
 
 [submodule "bundle/nerdtree"]
     path = bundle/nerdtree
@@ -18,9 +18,9 @@
     path = bundle/vim-rails
     url = https://github.com/tpope/vim-rails.git
 
-[submodule "bundle/vim-supertab"]
-    path = bundle/vim-supertab
-    url = https://github.com/tsaleh/vim-supertab.git
+[submodule "bundle/supertab"]
+    path = bundle/supertab
+    url =  https://github.com/ervandew/supertab.git
 
 [submodule "bundle/snipmate.vim"]
     path = bundle/snipmate.vim
