@@ -1,6 +1,9 @@
 " add source ~/.vim/vimrc to your ~/.vimrc file
 call pathogen#infect()
 
+colorscheme solarized
+set background=dark
+
 syntax enable
 
 filetype plugin indent on
@@ -151,3 +154,4 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "map <leader>tp :tabprevious<cr>
 let ruby_space_errors = 1
 let c_space_errors = 1
+nmap <C-s> :w !sudo tee %<cr>
