@@ -128,6 +128,9 @@ map <leader>ss :setlocal spell!<cr>
 " Map leader '['  ']' to switch between tabs 
 nmap <leader>[ :tabp <cr>
 nmap <leader>] :tabn <cr>
+
+" Map syntastic checker
+nmap <leader>c :SyntasticCheck<cr>
            
 " goto first char from line
 map 0 ^
@@ -155,3 +158,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 let ruby_space_errors = 1
 let c_space_errors = 1
 nmap <C-s> :w !sudo tee %<cr>
+" set js checker for syntastic plugin
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_coffee_checkers = ['coffeelint']
+let g:syntastic_coffee_coffeelint_args = '--file ~/.vim/coffeelint.json'
