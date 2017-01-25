@@ -1,10 +1,10 @@
 " add source ~/.vim/vimrc to your ~/.vimrc file
 call pathogen#infect()
 
-colorscheme solarized
-set background=dark
-
 syntax enable
+colorscheme blacklight
+
+set guifont=Hack:h11
 
 filetype plugin indent on
 
@@ -45,7 +45,7 @@ set hidden
 set wildmenu
 
 " Set vim shell.
-set shell=/bin/bash
+set shell=/bin/zsh
 
 " Add interactive mode to shellcomandflag
 " this will load ~/.bashrc
@@ -128,6 +128,12 @@ map <leader>ss :setlocal spell!<cr>
 " Map leader '['  ']' to switch between tabs 
 nmap <leader>[ :tabp <cr>
 nmap <leader>] :tabn <cr>
+" Babel
+nmap <leader>b :Babel <cr>
+vmap <leader>b :Babel <cr>
+" JSHint
+nmap <leader>js :JSHint <cr>
+vmap <leader>js :JSHint <cr>
 
 " Map syntastic checker
 nmap <leader>c :SyntasticCheck<cr>
@@ -162,3 +168,8 @@ nmap <C-s> :w !sudo tee %<cr>
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_coffee_checkers = ['coffeelint']
 let g:syntastic_coffee_coffeelint_args = '--file ~/.vim/coffeelint.json'
+" set jsx syntax highlight in .js files
+let g:jsx_ext_required = 0
+
+let jshint2_read = 1
+let jshint2_confirm = 0

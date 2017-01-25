@@ -1,5 +1,7 @@
 " Giving vim some makeup
 syntax enable
+colorscheme solarized
+set background=light
 
 " Hide toolbar, menubar and scrollbars
 set guioptions-=T
