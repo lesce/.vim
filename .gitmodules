@@ -97,3 +97,32 @@
 [submodule "bundle/webapi-vim"]
     path = bundle/webapi-vim
     url = https://github.com/mattn/webapi-vim 
+
+[submodule "bundle/direnv.vim"]
+    path = bundle/direnv.vim
+    url = https://github.com/direnv/direnv.vim.git
+
+[submodule "bundle/yajs.vim"]
+    path = bundle/yajs.vim
+    url = https://github.com/othree/yajs.vim.git
+
+[submodule "bundle/vim-multiple-cursors"]
+    path = bundle/vim-multiple-cursors
+    url = https://github.com/terryma/vim-multiple-cursors.git
+
+[submodule "bundle/editorconfig-vim"]
+    path = bundle/editorconfig-vim
+    url = https://github.com/editorconfig/editorconfig-vim.git
+
+[submodule "bundle/vim-codeclimate"]
+    path = bundle/vim-codeclimate
+    url = https://github.com/wfleming/vim-codeclimate.git
+
+[submodule "bundle/vim-grepper"]
+    path = bundle/vim-grepper
+    url = https://github.com/mhinz/vim-grepper.git
+
+[submodule "bundle/vim-rubocop"]
+    path = bundle/vim-rubocop
+    url = https://github.com/ngmy/vim-rubocop.git
+

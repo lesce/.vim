@@ -95,6 +95,11 @@ set expandtab
 
 set tags+=gems.tags
 
+" Configure FuzzyFinder
+let g:ctrlp_custom_ignore = '\v[\/]\.(DS_Storegit|hg|svn|optimized|compiled|)|(node_modules|tmp)$'
+let g:fuf_dir_exclude = '\v(^|[/\\])((\.(hg|git|bzr))|node_modules|vendor)($|[/\\])'
+
+
 " make comma my leader key.
 let mapleader = ','
 let g:mapleader = ','
@@ -173,3 +178,7 @@ let g:jsx_ext_required = 0
 
 let jshint2_read = 1
 let jshint2_confirm = 0
+
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+nmap <Leader>cc :CodeClimateAnalyzeProject<CR>
