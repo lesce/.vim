@@ -2,9 +2,8 @@
 call pathogen#infect()
 
 syntax enable
-colorscheme blacklight
-
-set guifont=Hack:h11
+colorscheme solarized
+set background=dark
 
 filetype plugin indent on
 
@@ -170,8 +169,9 @@ let ruby_space_errors = 1
 let c_space_errors = 1
 nmap <C-s> :w !sudo tee %<cr>
 " set js checker for syntastic plugin
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_coffee_checkers = ['coffeelint']
+let g:syntastic_javascript_eslint_exe = 'npm run eslint --'
 let g:syntastic_coffee_coffeelint_args = '--file ~/.vim/coffeelint.json'
 " set jsx syntax highlight in .js files
 let g:jsx_ext_required = 0
@@ -181,4 +181,17 @@ let jshint2_confirm = 0
 
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
-nmap <Leader>cc :CodeClimateAnalyzeProject<CR>
+nmap <Leader>cc :CodeClimateAnalyzeOpenFiles<CR>
+let g:neoformat_only_msg_on_error = 1
+let g:neoformat_enabled_javascript = ['prettiereslint']
+function! neoformat#formatters#javascript#prettiereslint() abort
+  return {
+        \ 'exe': 'prettier-eslint',
+        \ 'args': [ '--stdin', '--single-quote', '--no-semi', '--bracket-spacing', '--trailing-comma', 'es5', '--eslint-ignore', '| head -c -1', '2>/dev/null'],
+        \ 'stdin': 1,
+        \ }
+endfunction
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
