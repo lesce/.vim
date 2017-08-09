@@ -130,4 +130,8 @@
     path = bundle/vim-grapql
     url = https://github.com/jparise/vim-graphql.git
 
+[submodule "bundle/vim-gitgutter"]
+    path = bundle/vim-gitgutter
+    url = https://github.com/airblade/vim-gitgutter
+
 

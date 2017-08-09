@@ -2,7 +2,6 @@
 call pathogen#infect()
 
 syntax enable
-colorscheme solarized
 set background=dark
 
 filetype plugin indent on
@@ -95,7 +94,7 @@ set expandtab
 set tags+=gems.tags
 
 " Configure FuzzyFinder
-let g:ctrlp_custom_ignore = '\v[\/]\.(DS_Storegit|hg|svn|optimized|compiled|)|(node_modules|tmp)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.(DS_Storegit|hg|svn|optimized|compiled|)|(node_modules|tmp|coverage)$'
 let g:fuf_dir_exclude = '\v(^|[/\\])((\.(hg|git|bzr))|node_modules|vendor)($|[/\\])'
 
 
@@ -195,3 +194,12 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * Neoformat
 augroup END
+set autoread
+au CursorHold * checktime
+
+call plug#begin('~/.vim/plugged')
+Plug 'roosta/srcery'
+call plug#end()
+colorscheme srcery
+
+source ~/.vim/bundle/sort.unfolded.vim
