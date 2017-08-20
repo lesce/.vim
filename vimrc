@@ -183,23 +183,26 @@ nmap <Leader>r :RuboCop<CR>
 nmap <Leader>cc :CodeClimateAnalyzeOpenFiles<CR>
 let g:neoformat_only_msg_on_error = 1
 let g:neoformat_enabled_javascript = ['prettiereslint']
-function! neoformat#formatters#javascript#prettiereslint() abort
-  return {
-        \ 'exe': 'prettier-eslint',
-        \ 'args': [ '--stdin', '--single-quote', '--no-semi', '--bracket-spacing', '--trailing-comma', 'es5', '--eslint-ignore', '| head -c -1', '2>/dev/null'],
-        \ 'stdin': 1,
-        \ }
-endfunction
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * Neoformat
-augroup END
+"function! neoformat#formatters#javascript#prettiereslint() abort
+"  return {
+"        \ 'exe': 'prettier-eslint',
+"        \ 'args': [ '--stdin', '--single-quote', '--no-semi', '--bracket-spacing', '--trailing-comma', 'es5', '--eslint-ignore', '| head -c -1', '2>/dev/null'],
+"        \ 'stdin': 1,
+"        \ }
+"endfunction
+"augroup fmt
+"  autocmd!
+"  autocmd BufWritePre * Neoformat
+"augroup END
 set autoread
 au CursorHold * checktime
 
 call plug#begin('~/.vim/plugged')
 Plug 'roosta/srcery'
+Plug 'reedes/vim-colors-pencil'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
-colorscheme srcery
+colorscheme PaperColor
+set background=light
 
 source ~/.vim/bundle/sort.unfolded.vim
