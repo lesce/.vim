@@ -201,8 +201,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'roosta/srcery'
 Plug 'reedes/vim-colors-pencil'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'nightsense/simplifysimplify'
 call plug#end()
-colorscheme PaperColor
-set background=light
+colorscheme srcery
 
 source ~/.vim/bundle/sort.unfolded.vim
