@@ -20,8 +20,6 @@ set nu
 
 " Set this for vim Powerline
 "let g:Powerline_theme="skwp"
-let g:Powerline_colorscheme="skwp"
-let g:Powerline_symbold="fancy"
 
 set laststatus=2
 set encoding=utf-8
@@ -181,6 +179,11 @@ let jshint2_confirm = 0
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
 nmap <Leader>cc :CodeClimateAnalyzeOpenFiles<CR>
+
+nmap <Leader>gd :GoDef<CR>
+nmap <Leader>tb :DlvToggleBreakpoint<CR>
+nmap <Leader>de :DlvDebug<CR>
+
 let g:neoformat_only_msg_on_error = 1
 let g:neoformat_enabled_javascript = ['prettiereslint']
 function! neoformat#formatters#javascript#prettiereslint() abort
@@ -199,7 +202,13 @@ au CursorHold * checktime
 
 call plug#begin('~/.vim/plugged')
 Plug 'roosta/srcery'
+Plug 'sebdah/vim-delve'
+Plug 'fatih/vim-go'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 colorscheme srcery
 
+let g:go_fmt_command = "goimports"
 source ~/.vim/bundle/sort.unfolded.vim
