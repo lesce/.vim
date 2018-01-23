@@ -184,31 +184,50 @@ nmap <Leader>gd :GoDef<CR>
 nmap <Leader>tb :DlvToggleBreakpoint<CR>
 nmap <Leader>de :DlvDebug<CR>
 
-let g:neoformat_only_msg_on_error = 1
-let g:neoformat_enabled_javascript = ['prettiereslint']
-function! neoformat#formatters#javascript#prettiereslint() abort
-  return {
-        \ 'exe': 'prettier-eslint',
-        \ 'args': [ '--stdin', '--single-quote', '--no-semi', '--bracket-spacing', '--trailing-comma', 'es5', '--eslint-ignore', '| head -c -1', '2>/dev/null'],
-        \ 'stdin': 1,
-        \ }
-endfunction
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * Neoformat
-augroup END
 set autoread
 au CursorHold * checktime
 
 call plug#begin('~/.vim/plugged')
-Plug 'roosta/srcery'
-Plug 'sebdah/vim-delve'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'Shutnik/jshint2.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'direnv/direnv.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
+Plug 'garbas/vim-snipmate'
+Plug 'jbgutierrez/vim-babel'
+Plug 'jparise/vim-graphql'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/webapi-vim'
+Plug 'mhinz/vim-grepper'
+Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ngmy/vim-rubocop'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'othree/es.next.syntax.vim'
+Plug 'othree/yajs.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'roosta/srcery'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'sebdah/vim-delve'
+Plug 'skammer/vim-css-color'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/FuzzyFinder'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/Vimball'
+Plug 'wfleming/vim-codeclimate'
 call plug#end()
 colorscheme srcery
 
 let g:go_fmt_command = "goimports"
-source ~/.vim/bundle/sort.unfolded.vim
